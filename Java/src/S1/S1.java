@@ -10,7 +10,8 @@ public class S1 {
 //        task2();
 //        task3();
 //        System.out.println(task4("Добро пожаловать на курс по Java"));
-        System.out.println(task5(2, 0));
+        // System.out.println(task5(2, 0));
+         System.out.println(countNTriangle(10));
 
 
 
@@ -129,5 +130,12 @@ public class S1 {
 //        }
 //
 //        return 1/temp;
+    }
+
+    
+    static int countNTriangle(int n){
+      return ((n + 1) * n) / 2;
+      // Введите свое решение ниже
+
     }
 }
