@@ -1,11 +1,5 @@
 package S1;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-
 public class HW1 {
     private static final int[] Xindex = null;
 
@@ -96,7 +90,7 @@ public class HW1 {
         }
     }
 
-    public static boolean chekExpression(String expression){
+    public static boolean chekExpression  (String expression){
         String[] parts = expression.split("=");
         int left = Integer.parseInt(parts[0].trim());
         int right = Integer.parseInt(parts[1].trim());
@@ -104,6 +98,5 @@ public class HW1 {
 
     }
 
-    
 }
 

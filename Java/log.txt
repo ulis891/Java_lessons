@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2023-07-25T12:46:15.477350500Z</date>
+  <millis>1690289175477</millis>
+  <nanos>350500</nanos>
+  <sequence>0</sequence>
+  <level>INFO</level>
+  <class>S2.S2</class>
+  <method>saveToFile</method>
+  <thread>1</thread>
+  <message>\hj\h\htext.txt (Системе не удается найти указанный путь)</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2023-07-25T12:47:17.476099200Z</date>
+  <millis>1690289237476</millis>
+  <nanos>99200</nanos>
+  <sequence>0</sequence>
+  <level>INFO</level>
+  <class>S2.S2</class>
+  <method>saveToFile</method>
+  <thread>1</thread>
+  <message>\hj\h\htext.txt (Системе не удается найти указанный путь)</message>
+</record>
+</log>
+июл. 25, 2023 3:49:02 PM S2.S2 saveToFile
+INFO: \hj\h\htext.txt (Системе не удается найти указанный путь)
+июл. 25, 2023 3:52:49 PM S2.S2 saveToFile
+INFO: \hj\h\htext.txt (Системе не удается найти указанный путь)
+июл. 25, 2023 8:42:55 PM S2.S2 saveToFile
+INFO: \hj\h\htext.txt (Системе не удается найти указанный путь)
