@@ -1,9 +1,8 @@
 package S2;
 
-import org.json.simple.parser.ParseException;
 
 public class HW2_1 {
-    public static void main(String[] args) throws ParseException {
+    public static void main(String[] args) {
 
         String QUERY = "";
         String PARAMS = "";
@@ -23,7 +22,7 @@ public class HW2_1 {
 
     public static class Answer {
 
-        public static StringBuilder answer(String QUERY, String PARAMS) throws ParseException {
+        public static StringBuilder answer(String QUERY, String PARAMS){
             // Напишите свое решение ниже
 
             StringBuilder stringBuilder = new StringBuilder();
@@ -38,9 +37,9 @@ public class HW2_1 {
                 if (temp[1].trim().equals("\"null\"")) break;
                 else {
                     stringBuilder.append(temp[0].trim().replaceAll("\"", ""))
-                                 .append("=")
-                                 .append(temp[1].replaceAll("\"", "'"))
-                                 .append(" and ");
+                            .append("=")
+                            .append(temp[1].replaceAll("\"", "'"))
+                            .append(" and ");
                 }
             }
             return stringBuilder.replace(stringBuilder.length() - 5, stringBuilder.length(), "");
