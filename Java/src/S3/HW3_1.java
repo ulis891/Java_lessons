@@ -23,7 +23,7 @@ public class HW3_1 {
                      .append("\n")
                      .append("Average is ")
                      .append(sum(arr)/sort.length);
-        System.out.println(stringBuilder);;
+        System.out.println(stringBuilder);
 
     }
 
