@@ -1,16 +1,18 @@
 package S3;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
 
 public class HW3_1 {
     public static void main(String[] args) {
-        int[] nums = new int[] {5,9,5,1,4,5,8,7,3,1,3,5}; // todo передалать под Intrger
-        System.out.println(printAnalitic(nums));
+        Integer[] nums = new Integer[] {5,9,5,1,4,5,8,7,3,1,3,5};
+       printAnalitic(nums);
     }
 
-    static StringBuilder printAnalitic (int[] arr){
+    static void printAnalitic (Integer[] arr){
         StringBuilder stringBuilder = new StringBuilder();
-        int[] sort = sortArray(arr);
+        Integer[] sort = sortArray(arr);
         stringBuilder.append(Arrays.toString(sort))
                      .append("\n")
                      .append("Minimum is ")
@@ -20,13 +22,23 @@ public class HW3_1 {
                      .append(sort[sort.length-1])
                      .append("\n")
                      .append("Average is ")
-                     .append(Arrays.stream(arr).sum()/sort.length);
-        return stringBuilder;
+                     .append(sum(arr)/sort.length);
+        System.out.println(stringBuilder);;
 
     }
 
-    private static int[] sortArray(int[] arr){
-        return Arrays.stream(arr).sorted().toArray();
+    private static Integer[] sortArray(Integer[] arr){
+        return Arrays.stream(arr).sorted().toArray(Integer[]::new);
+
+    }
+    private static Integer sum (Integer[] arr){
+        Iterator<Integer> iterator = Arrays.stream(arr).iterator();
+        Integer summa = 0;
+        while (iterator.hasNext()){
+            Integer el = iterator.next();
+            summa +=  el;
+        }
+        return summa;
     }
 
 }
