@@ -1,42 +1,42 @@
 package S5;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 
 public class HW5 {
+
+    static Map<String, List<String>> phoneBook = new HashMap<>();    
+    static String name = "";
+    static String phone = "";
     public static void main(String[] args) {
-        static Map<String, List<String>> phoneBook = new HashMap<>();
         boolean menuFlag = true;
-        String name = "";
-        String phone = "";
 
         while (menuFlag) {
             String option = doOption();
             switch (option) {
                 case "1":
-                    // add();
-                    System.out.println("add");
+                    add();
                     break;
                 case "2":
-                    // find();
-                    System.out.println("find");
+                    find();
                     break;
 
                 case "3":
-                    // print();
-                    System.out.println("print");
+                    printPoneBook();
                     break;
 
                 case "0":
-                    // print();
+                    
                     System.out.println("Bye bye!");
                     menuFlag = false;
                     break;
 
 
                 default:
-                    System.out.println("Неизвестная комонда");
+                    System.out.println("Неизвестная команда");
                     break;
             }
         }
@@ -56,7 +56,7 @@ public class HW5 {
         return scanner.next();
     }
 
-    static void add(){
+    public static void add(){
         System.out.println("Введите имя");
         name = readConsole();
         System.out.println("Введите телефон");
@@ -70,18 +70,34 @@ public class HW5 {
             phoneList.add(phone);
             phoneBook.put(name, phoneList);
         }
-
-        static void print(){
-            System.out.println(phoneBook);
-        }
     }
 
+        static void printPoneBook(){
+            StringBuilder stringBuilder = new StringBuilder();
+            for (Map.Entry<String, List<String>> entry: phoneBook.entrySet()) {
+                stringBuilder.append(entry.getKey());
+                stringBuilder.append(" : ");
+                stringBuilder.append(entry.getValue());
+                stringBuilder.append("\n");
+            }
+            
+            // System.out.println(phoneBook);
+            System.out.println(stringBuilder);
+        }
 
-
-
-
-    
-    
-
-
+        public static void find(){
+            System.out.println("Введите имя контакта");
+            name = readConsole();
+            System.out.println(phoneBook.getOrDefault(name, new ArrayList<>()));
+        }
 }
+
+
+
+
+
+    
+    
+
+
+
