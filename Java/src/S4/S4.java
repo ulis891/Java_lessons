@@ -6,7 +6,20 @@ public class S4 {
     public static void main(String[] args) {
 //        task0();
 //        task1();
-        task2();
+//        task2();
+//        task3();
+        S4_myStack stack = new S4_myStack();
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        stack.push(4);
+        stack.push(5);
+        System.out.println(stack.peek());
+        System.out.println(stack.pop());
+        System.out.println(stack.peek());
+        System.out.println(stack.size());
+        System.out.println(stack.empty());
+
     }
 
     static void task0() {
@@ -89,6 +102,30 @@ public class S4 {
                     list.add(text);
                     System.out.printf("Текст %s добавлено\n", text);
             }
+        }
+    }
+
+    static void task3(){
+        /*
+        Написать метод, который принимает массив элементов,
+        помещает их в стек и выводит на консоль содержимое стека
+
+        Написать метод, который принимает массив элементов,
+        помещает их в очередь и выводит на консоль содержимое очереди.
+         */
+        Integer[] array = {1,2,3,4,5,6};
+        Stack<Integer> stack = new Stack<>();
+        Queue<Integer> queue = new LinkedList<>();
+
+        for (int i = 0; i < array.length; i++) {
+            stack.push(array[i]);
+            queue.offer(array[i]);
+        }
+        while (!stack.isEmpty()){
+            System.out.println(stack.pop());
+        }
+        while (!queue.isEmpty()){
+            System.out.println(queue.poll());
         }
     }
 }
