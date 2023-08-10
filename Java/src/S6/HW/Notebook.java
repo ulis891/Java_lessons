@@ -25,7 +25,7 @@ public class Notebook {
 
     @Override
     public String toString() {
-        return "Фирма : " + company + "\n" +
+        return "\n" + "Фирма : " + company + "\n" +
                " Модель: " + model + "\n" +
                " Серийный номер : " + serialNumber + "\n" +
                " Операционная система : " + os + "\n" +
@@ -50,16 +50,27 @@ public class Notebook {
                 price.equals(notebook.price);
     }
 
-    @Override
-    public int hashCode(){
-        return 2 * company.hashCode() +
-                3 * model.hashCode() +
-                4 * serialNumber.hashCode() +
-                2 * serialNumber.hashCode() +
-                4 * os.hashCode() +
-                5 * ram +
-                5 * memory +
-                9 * (int)display +
-                6 * price;
+    public String getСompany() {
+        return company;
+    }
+
+    public int getRam() {
+        return ram;
+    }
+
+    public int getHardDisk() {
+        return memory;
+    }
+
+    public String getOperatingSystem() {
+        return os;
+    }
+    
+    public double getDisplay() {
+        return display;
+    }
+
+    public int getPrice() {
+        return price;
     }
 }
