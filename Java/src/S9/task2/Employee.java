@@ -36,6 +36,13 @@ public abstract class Employee implements Comparable<Employee>{
                 '}';
     }
 
+    /**
+     * Конструктор сотрудника
+     * @param name имя
+     * @param surname фамилия
+     * @param age возраст
+     * @param salary зарплата
+     */
     public Employee(String name, String surname, int age, double salary) {
         this.name = name;
         this.surname = surname;
