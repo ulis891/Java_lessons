@@ -12,7 +12,7 @@ public class Program {
 
         int age = random.nextInt(20, 80);
         int salaryIndex = random.nextInt(500,900);
-        int empolyeeType = random.nextInt(0,2);
+        int empolyeeType = random.nextInt(0, 2);
 
 
         if (empolyeeType == 1) {
