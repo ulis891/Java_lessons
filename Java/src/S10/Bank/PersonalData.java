@@ -1,4 +1,4 @@
-package S10;
+package S10.Bank;
 
 public interface PersonalData {
 
