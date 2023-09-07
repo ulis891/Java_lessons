@@ -8,7 +8,7 @@ public class Box<T extends Fruit> {
 
 
     public Box() {
-this.fruits = new ArrayList<T>();
+        this.fruits = new ArrayList<>();
     }
 
 
@@ -56,7 +56,7 @@ this.fruits = new ArrayList<T>();
             this.fruits.addAll(boxOut.fruits);
             boxOut.fruits = new ArrayList<T>();
             String frt = String.valueOf(this.fruits.get(0).getClass()).split("\\.")[2];
-            System.out.printf("Теперь в ящике %s, весом %.2f кг.\n", frt, this.getWeight());
+            System.out.printf("Теперь ящик %sBox весит %.2f кг.\n", frt, this.getWeight());
         } else {
             System.out.println("Нельзя смешивать фрукты!");
 
