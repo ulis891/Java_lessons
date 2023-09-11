@@ -8,7 +8,7 @@ import java.util.Date;
 
 public class BookingPresenters implements ViewObserver {
 
-    private Model model;
+    private final Model model;
     private final View view;
 
     public BookingPresenters(Model model, View view) {
@@ -56,6 +56,5 @@ public class BookingPresenters implements ViewObserver {
         updateReservationResultUI3(model.getTable(tableId), oldReservation);
         int reservationID = model.changeReservationTable(oldReservation,reservationDate, tableId, name);
         changeReservationResultUI(model.getTable(tableId), reservationID);
-        // todo sadsdd
     }
 }
