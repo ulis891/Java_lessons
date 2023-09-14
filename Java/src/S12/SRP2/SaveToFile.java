@@ -47,7 +47,7 @@ public class SaveToFile {
             writer.write("price: " + order.getPrice() + "\n");
             writer.flush();
         } catch (IOException ex) {
-            System.out.println(ex.getMessage());;
+            System.out.println(ex.getMessage());
         }
     }
 
@@ -67,7 +67,7 @@ public class SaveToFile {
             writer.write("}\n");
             writer.flush();
         } catch (IOException ex) {
-            System.out.println(ex.getMessage());;
+            System.out.println(ex.getMessage());
         }
     }
 }
