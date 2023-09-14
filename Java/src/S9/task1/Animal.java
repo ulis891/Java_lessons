@@ -8,7 +8,7 @@ public abstract class Animal {
     private static int idCounter = 1000;
 
     private static int counter;
-    private int id;
+    private final int id;
 
     public static int getCounter() {
         return counter;
