@@ -7,6 +7,7 @@ import java.util.Set;
 import java.util.TreeSet;
 
 public class S6 {
+
     public static void main(String[] args) {
         // task0();
         // task1(createArr(100, 0, 24));
