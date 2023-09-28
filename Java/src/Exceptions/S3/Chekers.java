@@ -39,7 +39,7 @@ public class Chekers {
      */
     protected static boolean telCheker(String string){
         try {
-            int number = Integer.parseInt(string);
+            Integer.parseInt(string);
             return true;
         }
         catch (NumberFormatException e){
@@ -53,9 +53,6 @@ public class Chekers {
      * @return true - если в строке m или f. Иначе - false
      */
     protected static boolean sexCheker(String string){
-        if (string.equals("f") || string.equals("m")) {
-            return true;
-        }
-        return false;
+        return string.equals("f") || string.equals("m");
     }
 }
