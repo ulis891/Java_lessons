@@ -11,7 +11,7 @@ public class ToyStore {
     private final ArrayList<Toy> toys;
 
     public ToyStore() {
-        this.toys = new ArrayList<Toy>();
+        this.toys = new ArrayList<>();
     }
 
     public ArrayList<Toy> getToys() {
@@ -49,7 +49,7 @@ public class ToyStore {
      * @return выйгрышная игрушка
      */
     public Toy choosePrizeToy() {
-        ArrayList<Toy> prizeToys = new ArrayList<Toy>();
+        ArrayList<Toy> prizeToys = new ArrayList<>();
 
         for (Toy toy : toys) {
             int totalProbability = (int)(toy.getProbability() * 100);
